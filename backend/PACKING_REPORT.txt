@@ -1,0 +1,277 @@
+SOURCE REVIEW PACKAGE - not a complete runnable project
+Included files: 57
+Included uncompressed bytes: 1005140
+Per-file byte limit: 2097152
+Per-project byte limit: 104857600
+
+Before uploading, review ALL included files for passwords, API keys,
+tokens and real user data. Filenames alone cannot identify secrets.
+SQL dumps and notebook outputs may contain private data.
+Large files and unrecognized file extensions can be missing.
+Nested ZIPs are not unpacked. Share missing source separately if needed.
+
+EXCLUSION COUNTS (directory counts are pruned subtrees):
+dependency_or_generated_directory: 24310
+non_source_extension: 23
+sensitive_filename: 2
+
+EXCLUSION DETAILS (first 200):
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/api/v1/__pycache__/llm_api.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/api/v1/__pycache__/ali_api.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/api/v1/__pycache__/ali_api.cpython-311.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/utils/__pycache__/tools.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/utils/__pycache__/time_logger.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/llm/__pycache__/doubao.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/llm/__pycache__/base.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/oss_service.cpython-311.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/oss_service.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/asr_manager.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/tts_callback.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/tts_manager.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/ali_service.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/llm_service.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/services/__pycache__/asr_callback.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/database/sqlite_models/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/database/sqlite_models/__pycache__/models.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/database/sqlite_schema/__pycache__/request.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/database/__pycache__/chroma_db.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/database/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/database/__pycache__/sqlite_db.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/core/__pycache__/config.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/core/__pycache__/logger.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/app/core/__pycache__/__init__.cpython-312.pyc
+sensitive_filename: root/digital_person/backend-4-25-d/test/aliyunAPI/.env
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/test/__pycache__/test_oss.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/test/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/test/__pycache__/test.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/test/__pycache__/voice_test.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/.lock
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/.gitignore
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/CACHEDIR.TAG
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/include/site/python3.12/greenlet/greenlet.h
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/RECORD
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/WHEEL
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/entry_points.txt
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/INSTALLER
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/METADATA
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/top_level.txt
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/REQUESTED
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/licenses/AUTHORS
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/cffi-2.0.0.dist-info/licenses/LICENSE
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/RECORD
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/WHEEL
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/entry_points.txt
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/INSTALLER
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/METADATA
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/top_level.txt
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/REQUESTED
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/anyio-4.12.1.dist-info/licenses/LICENSE
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/RECORD
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/WHEEL
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/INSTALLER
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/METADATA
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/top_level.txt
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/REQUESTED
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/licenses/NOTICE
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/propcache-0.4.1.dist-info/licenses/LICENSE
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/identification.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/rational.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/usertools.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/ctx_mp.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/ctx_base.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/inverselaplace.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/odes.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/polynomials.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/calculus.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/approximation.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/extrapolation.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/quadrature.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/differentiation.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/calculus/optimization.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/function_docs.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/ctx_iv.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/matrices/eigen.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/matrices/eigen_symmetric.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/matrices/calculus.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/matrices/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/matrices/linalg.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/matrices/matrices.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/ctx_fp.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/math2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/elliptic.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/zeta.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/bessel.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/expintegrals.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/rszeta.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/hypergeometric.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/functions.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/qfunctions.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/factorials.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/zetazeros.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/signals.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/theta.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/functions/orthogonal.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_hp.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_levin.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_power.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_fp.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_rootfinding.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_functions.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_str.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/extratest_zeta.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_functions2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_mpmath.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_bitwise.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_calculus.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_summation.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_linalg.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_identify.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_visualization.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/extratest_gamma.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_pickle.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/runtests.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_ode.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_eigen_symmetric.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_special.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_trig.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_compatibility.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_division.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/torture.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_convert.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_matrices.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_diff.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_eigen.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_gammazeta.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_basic_ops.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_interval.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_quad.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/tests/test_elliptic.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/visualization.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/ctx_mp_python.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/libelefun.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/libhyper.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/libmpc.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/libmpf.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/gammazeta.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/libmpi.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/libintmath.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/mpmath/libmp/backend.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/stop.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/before_sleep.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/asyncio/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/asyncio/retry.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/asyncio/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/asyncio/__pycache__/retry.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/nap.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/wait.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/_utils.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/after.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/before.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/retry.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/tornadoweb.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/py.typed
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/before_sleep.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/nap.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/before.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/after.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/wait.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/stop.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/retry.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/tenacity/__pycache__/_utils.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/annotated_doc/__init__.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/annotated_doc/main.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/annotated_doc/py.typed
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/annotated_doc/__pycache__/main.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/annotated_doc/__pycache__/__init__.cpython-312.pyc
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/_upb/_message.abi3.so
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/interval_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/localized_text_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/calendar_period.proto
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/expr_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/timeofday_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/interval.proto
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/dayofweek.proto
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/dayofweek_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/color_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/fraction_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/money.proto
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/datetime_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/postal_address_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/timeofday_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/localized_text_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/phone_number_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/money_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/date_pb2.py
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/date_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/month.proto
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/dayofweek_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/expr_pb2.pyi
+dependency_or_generated_directory: root/digital_person/backend-4-25-d/.venv/lib/python3.12/site-packages/google/type/latlng_pb2.py
+
+INCLUDED FILES:
+root/digital_person/backend-4-25-d/app/api/v1/llm_api.py
+root/digital_person/backend-4-25-d/app/api/v1/ali_api.py
+root/digital_person/backend-4-25-d/app/utils/time_logger.py
+root/digital_person/backend-4-25-d/app/utils/tools.py
+root/digital_person/backend-4-25-d/app/services/tts_manager.py
+root/digital_person/backend-4-25-d/app/services/tts_callback.py
+root/digital_person/backend-4-25-d/app/services/asr_callback.py
+root/digital_person/backend-4-25-d/app/services/__init__.py
+root/digital_person/backend-4-25-d/app/services/oss_service.py
+root/digital_person/backend-4-25-d/app/services/llm_service.py
+root/digital_person/backend-4-25-d/app/services/llm/base.py
+root/digital_person/backend-4-25-d/app/services/llm/doubao.py
+root/digital_person/backend-4-25-d/app/services/llm/ollama.py
+root/digital_person/backend-4-25-d/app/services/asr_manager.py
+root/digital_person/backend-4-25-d/app/services/ali_service.py
+root/digital_person/backend-4-25-d/app/database/sqlite_models/__init__.py
+root/digital_person/backend-4-25-d/app/database/sqlite_models/models.py
+root/digital_person/backend-4-25-d/app/database/sqlite_db.py
+root/digital_person/backend-4-25-d/app/database/chroma_db.py
+root/digital_person/backend-4-25-d/app/database/sqlite_schema/request.py
+root/digital_person/backend-4-25-d/app/database/__init__.py
+root/digital_person/backend-4-25-d/app/core/config.py
+root/digital_person/backend-4-25-d/app/core/logger.py
+root/digital_person/backend-4-25-d/uv.lock
+root/digital_person/backend-4-25-d/resources/test/hello.txt
+root/digital_person/backend-4-25-d/.python-version
+root/digital_person/backend-4-25-d/test/aliyunAPI/video.py
+root/digital_person/backend-4-25-d/test/aliyunAPI/embed.py
+root/digital_person/backend-4-25-d/test/aliyunAPI/voice.py
+root/digital_person/backend-4-25-d/test/aliyunAPI/ali_service.py
+root/digital_person/backend-4-25-d/test/test_asr_llm_tts.py
+root/digital_person/backend-4-25-d/test/__init__.py
+root/digital_person/backend-4-25-d/test/byteAPI/__init__.py
+root/digital_person/backend-4-25-d/test/byteAPI/embed.py
+root/digital_person/backend-4-25-d/test/ChromaDB/__init__.py
+root/digital_person/backend-4-25-d/test/ChromaDB/vector_db.py
+root/digital_person/backend-4-25-d/test/ollamaAPI/generate.py
+root/digital_person/backend-4-25-d/test/ollamaAPI/chat.py
+root/digital_person/backend-4-25-d/test/ollamaAPI/__init__.py
+root/digital_person/backend-4-25-d/test/ollamaAPI/embed.py
+root/digital_person/backend-4-25-d/test/test_asr_simple.py
+root/digital_person/backend-4-25-d/test/test_ws_tts.py
+root/digital_person/backend-4-25-d/test/voice_test.py
+root/digital_person/backend-4-25-d/test/test.py
+root/digital_person/backend-4-25-d/test/test_oss.py
+root/digital_person/backend-4-25-d/main.py
+root/digital_person/backend-4-25-d/run.py
+root/digital_person/backend-4-25-d/scripts/uninstall_nginx.sh
+root/digital_person/backend-4-25-d/scripts/deploy_fastapi.sh
+root/digital_person/backend-4-25-d/scripts/deploy_fastapi_container.sh
+root/digital_person/backend-4-25-d/scripts/stop_fastapi_container.sh
+root/digital_person/backend-4-25-d/scripts/deploy_nginx.sh
+root/digital_person/backend-4-25-d/scripts/deploy_nginx_container.sh
+root/digital_person/backend-4-25-d/scripts/stop_nginx_container.sh
+root/digital_person/backend-4-25-d/scripts/uninstall_fastapi.sh
+root/digital_person/backend-4-25-d/pyproject.toml
+root/digital_person/backend-4-25-d/README.md

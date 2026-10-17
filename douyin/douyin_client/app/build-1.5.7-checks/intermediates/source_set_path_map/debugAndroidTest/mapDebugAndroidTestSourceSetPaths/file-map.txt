@@ -1,0 +1,4 @@
+dy.lead.client.test.app-androidTest-0 C:\Users\xl__p\Desktop\douyin\douyin_client\app\build-1.5.7-checks\generated\res\resValues\androidTest\debug
+dy.lead.client.test.app-mergeDebugAndroidTestResources-1 C:\Users\xl__p\Desktop\douyin\douyin_client\app\build-1.5.7-checks\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+dy.lead.client.test.app-mergeDebugAndroidTestResources-2 C:\Users\xl__p\Desktop\douyin\douyin_client\app\build-1.5.7-checks\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+dy.lead.client.test.app-debugAndroidTest-3 C:\Users\xl__p\Desktop\douyin\douyin_client\app\build-1.5.7-checks\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

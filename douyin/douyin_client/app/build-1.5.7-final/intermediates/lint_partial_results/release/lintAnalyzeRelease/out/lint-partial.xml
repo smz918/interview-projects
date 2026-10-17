@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.3" type="partial_results">
+    <map id="UnsafeImplicitIntentLaunch">
+            <map id="actionsSent">
+                    <map id="android.settings.ACCESSIBILITY_SETTINGS (used to start an activity)">
+                        <location id="0"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationActivity.java"
+                            line="100"
+                            column="92"
+                            startOffset="9803"
+                            endLine="100"
+                            endColumn="142"
+                            endOffset="9853"/>
+                        <location id="1"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/InteractionActivity.java"
+                            line="43"
+                            column="134"
+                            startOffset="5355"
+                            endLine="43"
+                            endColumn="184"
+                            endOffset="5405"/>
+                        <location id="2"
+                            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/WorkspaceUi.java"
+                            line="28"
+                            column="98"
+                            startOffset="1950"
+                            endLine="28"
+                            endColumn="148"
+                            endOffset="2000"/>
+                    </map>
+            </map>
+    </map>
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="dy.lead.client.AutomationActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.drawable.app_icon"
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/drawable/app_icon.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="1"
+            endColumn="488"
+            endOffset="487"/>
+        <entry
+            name="model"
+            string="drawable[app_icon_real(U),app_icon(D)],string[automation_description(U)],style[AppTheme(U)],xml[automation_service(U)];4^2;;;"/>
+    </map>
+
+</incidents>

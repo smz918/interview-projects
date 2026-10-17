@@ -1,0 +1,245 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="dy.lead.client"
+4    android:versionCode="46"
+5    android:versionName="1.5.7" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:2:5-67
+11-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:2:22-64
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:3:5-77
+12-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:3:22-74
+13
+14    <queries>
+14-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:4:5-75
+15        <package android:name="com.ss.android.ugc.aweme" />
+15-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:4:14-65
+15-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:4:23-62
+16    </queries>
+17
+18    <permission
+18-->[androidx.core:core:1.9.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5b038529495055a6ecb464ee98ef39f4\workspace\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+19        android:name="dy.lead.client.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.9.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5b038529495055a6ecb464ee98ef39f4\workspace\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.9.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5b038529495055a6ecb464ee98ef39f4\workspace\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+21
+22    <uses-permission android:name="dy.lead.client.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+22-->[androidx.core:core:1.9.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5b038529495055a6ecb464ee98ef39f4\workspace\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.9.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5b038529495055a6ecb464ee98ef39f4\workspace\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+23    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
+24-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+25
+26    <application
+26-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:5:5-21:19
+27        android:allowBackup="false"
+27-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:5:18-45
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.9.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5b038529495055a6ecb464ee98ef39f4\workspace\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+29        android:debuggable="true"
+30        android:extractNativeLibs="false"
+31        android:icon="@drawable/app_icon_real"
+31-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:5:138-176
+32        android:label="518获客先锋"
+32-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:5:114-137
+33        android:theme="@style/AppTheme"
+33-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:5:82-113
+34        android:usesCleartextTraffic="true" >
+34-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:5:46-81
+35        <service
+35-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:6:9-130
+36            android:name="dy.lead.client.LegacyCaptureService"
+36-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:6:18-54
+37            android:exported="false"
+37-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:6:55-79
+38            android:foregroundServiceType="mediaProjection" />
+38-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:6:80-127
+39
+40        <activity
+40-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:7:9-142
+41            android:name="dy.lead.client.LegacyCaptureActivity"
+41-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:7:19-56
+42            android:excludeFromRecents="true"
+42-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:7:82-115
+43            android:exported="false"
+43-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:7:57-81
+44            android:taskAffinity="" />
+44-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:7:116-139
+45
+46        <service
+46-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:8:9-11:19
+47            android:name="dy.lead.client.AutomationService"
+47-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:8:18-51
+48            android:exported="true"
+48-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:8:149-172
+49            android:label="518获客先锋 · 自动化"
+49-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:8:52-81
+50            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+50-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:8:82-148
+51            <intent-filter>
+51-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:9:13-119
+52                <action android:name="android.accessibilityservice.AccessibilityService" />
+52-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:9:28-103
+52-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:9:36-100
+53            </intent-filter>
+54
+55            <meta-data
+55-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:10:13-113
+56                android:name="android.accessibilityservice"
+56-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:10:24-67
+57                android:resource="@xml/automation_service" />
+57-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:10:68-110
+58        </service>
+59
+60        <activity
+60-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:12:9-17:20
+61            android:name="dy.lead.client.AutomationActivity"
+61-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:12:19-53
+62            android:exported="true" >
+62-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:12:54-77
+63            <intent-filter>
+63-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:13:13-16:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:14:17-69
+64-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:14:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:15:17-77
+66-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:15:27-74
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:18:9-82
+70            android:name="dy.lead.client.InteractionActivity"
+70-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:18:19-54
+71            android:exported="false" />
+71-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:18:55-79
+72        <activity
+72-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:19:9-75
+73            android:name="dy.lead.client.MainActivity"
+73-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:19:19-47
+74            android:exported="false" />
+74-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:19:48-72
+75        <activity
+75-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:20:9-78
+76            android:name="dy.lead.client.MessageActivity"
+76-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:20:19-50
+77            android:exported="false" />
+77-->C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:20:51-75
+78
+79        <service
+79-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\595096771403c827b27ef72889724c50\workspace\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:9:9-15:19
+80            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+80-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\595096771403c827b27ef72889724c50\workspace\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:10:13-91
+81            android:directBootAware="true"
+81-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:17:13-43
+82            android:exported="false" >
+82-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\595096771403c827b27ef72889724c50\workspace\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:11:13-37
+83            <meta-data
+83-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\595096771403c827b27ef72889724c50\workspace\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:12:13-14:85
+84                android:name="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar"
+84-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\595096771403c827b27ef72889724c50\workspace\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:13:17-114
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.android.gms:play-services-mlkit-text-recognition-common:19.1.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\595096771403c827b27ef72889724c50\workspace\transformed\play-services-mlkit-text-recognition-common-19.1.0\AndroidManifest.xml:14:17-82
+86            <meta-data
+86-->[com.google.mlkit:vision-common:17.3.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\9657cb7fd7a5c379c4fed043eb6e8a30\workspace\transformed\vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
+87                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+87-->[com.google.mlkit:vision-common:17.3.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\9657cb7fd7a5c379c4fed043eb6e8a30\workspace\transformed\vision-common-17.3.0\AndroidManifest.xml:13:17-124
+88                android:value="com.google.firebase.components.ComponentRegistrar" />
+88-->[com.google.mlkit:vision-common:17.3.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\9657cb7fd7a5c379c4fed043eb6e8a30\workspace\transformed\vision-common-17.3.0\AndroidManifest.xml:14:17-82
+89            <meta-data
+89-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:20:13-22:85
+90                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+90-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:21:17-120
+91                android:value="com.google.firebase.components.ComponentRegistrar" />
+91-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:22:17-82
+92        </service>
+93
+94        <provider
+94-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:9:9-13:38
+95            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+95-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:10:13-78
+96            android:authorities="dy.lead.client.mlkitinitprovider"
+96-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:11:13-69
+97            android:exported="false"
+97-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:12:13-37
+98            android:initOrder="99" />
+98-->[com.google.mlkit:common:18.11.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\5c1ea777e966dd68a47514704b07f80b\workspace\transformed\common-18.11.0\AndroidManifest.xml:13:13-35
+99
+100        <activity
+100-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\fa7a56b1d3501d45907ba32c18ef11a2\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+101            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+101-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\fa7a56b1d3501d45907ba32c18ef11a2\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+102            android:exported="false"
+102-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\fa7a56b1d3501d45907ba32c18ef11a2\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+103            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+103-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\fa7a56b1d3501d45907ba32c18ef11a2\workspace\transformed\play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+104
+105        <meta-data
+105-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\d6aa7f1d979a49c991f7a317b797c71a\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+106            android:name="com.google.android.gms.version"
+106-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\d6aa7f1d979a49c991f7a317b797c71a\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+107            android:value="@integer/google_play_services_version" />
+107-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\d6aa7f1d979a49c991f7a317b797c71a\workspace\transformed\play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+108
+109        <provider
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\8b36149ed41ce62b006a6c64e148ae5e\workspace\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+110            android:name="androidx.startup.InitializationProvider"
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\8b36149ed41ce62b006a6c64e148ae5e\workspace\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+111            android:authorities="dy.lead.client.androidx-startup"
+111-->[androidx.emoji2:emoji2:1.2.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\8b36149ed41ce62b006a6c64e148ae5e\workspace\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+112            android:exported="false" >
+112-->[androidx.emoji2:emoji2:1.2.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\8b36149ed41ce62b006a6c64e148ae5e\workspace\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+113            <meta-data
+113-->[androidx.emoji2:emoji2:1.2.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\8b36149ed41ce62b006a6c64e148ae5e\workspace\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+114                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+114-->[androidx.emoji2:emoji2:1.2.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\8b36149ed41ce62b006a6c64e148ae5e\workspace\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+115                android:value="androidx.startup" />
+115-->[androidx.emoji2:emoji2:1.2.0] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\8b36149ed41ce62b006a6c64e148ae5e\workspace\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+116            <meta-data
+116-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\064b465229c5dfead103ba27ebf82c4a\workspace\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+117                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+117-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\064b465229c5dfead103ba27ebf82c4a\workspace\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+118                android:value="androidx.startup" />
+118-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\064b465229c5dfead103ba27ebf82c4a\workspace\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+119        </provider>
+120
+121        <service
+121-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+122            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+122-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+123            android:exported="false" >
+123-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+124            <meta-data
+124-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+125                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+125-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+126                android:value="cct" />
+126-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\f0eb6a7c9fb08a4b05c3eb14b0fa3880\workspace\transformed\transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+127        </service>
+128        <service
+128-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\43bce7db4cc195c0fe3b7e3a20baebfc\workspace\transformed\transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+129            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+129-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\43bce7db4cc195c0fe3b7e3a20baebfc\workspace\transformed\transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+130            android:exported="false"
+130-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\43bce7db4cc195c0fe3b7e3a20baebfc\workspace\transformed\transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+131            android:permission="android.permission.BIND_JOB_SERVICE" >
+131-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\43bce7db4cc195c0fe3b7e3a20baebfc\workspace\transformed\transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+132        </service>
+133
+134        <receiver
+134-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\43bce7db4cc195c0fe3b7e3a20baebfc\workspace\transformed\transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+135            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+135-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\43bce7db4cc195c0fe3b7e3a20baebfc\workspace\transformed\transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+136            android:exported="false" />
+136-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\CodexSandboxOffline\.gradle\caches\9.3.1\transforms\43bce7db4cc195c0fe3b7e3a20baebfc\workspace\transformed\transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+137    </application>
+138
+139</manifest>

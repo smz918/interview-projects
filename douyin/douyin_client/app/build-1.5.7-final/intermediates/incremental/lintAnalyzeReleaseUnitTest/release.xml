@@ -1,0 +1,25 @@
+<variant
+    name="release"
+    package="dy.lead.client"
+    minSdkVersion="24"
+    targetSdkVersion="34"
+    mergedManifest="build-1.5.7-final\intermediates\merged_manifest\release\processReleaseMainManifest\AndroidManifest.xml"
+    partialResultsDir="build-1.5.7-final\intermediates\unit_test_lint_partial_results\release\lintAnalyzeReleaseUnitTest\out"
+    desugaredMethodsFiles="C:\Users\xl__p\.gradle\caches\9.3.1\transforms\58672c5e736e83e24262a4b2c70d7ce5\workspace\transformed\D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+  </sourceProviders>
+  <testSourceProviders>
+    <sourceProvider
+        manifests="src\test\AndroidManifest.xml"
+        javaDirectories="src\test\java;src\testRelease\java;src\test\kotlin;src\testRelease\kotlin"
+        assetsDirectories="src\test\assets;src\testRelease\assets"
+        unitTest="true"/>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      type="UNIT_TEST">
+  </artifact>
+</variant>

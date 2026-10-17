@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.3" type="conditional_incidents">
+
+    <incident
+        id="UnusedAttribute"
+        severity="warning"
+        message="">
+        <fix-data minSdk="ffffffffff800000" requiresApi="ffffffffe0000000"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/xml/automation_service.xml"
+            line="7"
+            column="5"
+            startOffset="348"
+            endLine="7"
+            endColumn="37"
+            endOffset="380"/>
+        <map>
+            <entry
+                name="message"
+                string="Attribute `canTakeScreenshot` is only used in API level 30 and higher (current min is %1$s)"/>
+            <api-levels id="minSdk"
+                value="ffffffffff800000"/>
+            <api-levels id="requiresApi"
+                value="ffffffffe0000000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="ForegroundServicePermission"
+        severity="error"
+        message="foregroundServiceType:mediaProjection requires permission:[android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION]">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*manifest*0}"
+            line="6"
+            column="9"
+            startOffset="474"
+            endLine="6"
+            endColumn="130"
+            endOffset="595"/>
+        <map>
+            <condition targetGE="34"/>
+        </map>
+    </incident>
+
+    <incident
+        id="VectorRaster"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/drawable/app_icon.xml"
+            line="1"
+            column="340"
+            startOffset="339"
+            endLine="1"
+            endColumn="366"
+            endOffset="365"/>
+        <map>
+            <entry
+                name="containsFillType"
+                boolean="false"/>
+            <entry
+                name="containsGradient"
+                boolean="false"/>
+            <entry
+                name="folderVersion"
+                int="-1"/>
+            <entry
+                name="message"
+                string="Resource references will not work correctly in images generated for this vector icon for API &lt; %1$d; check generated icon to make sure it looks acceptable"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationService.java"
+            line="170"
+            column="27"
+            startOffset="14340"
+            endLine="170"
+            endColumn="31"
+            endOffset="14344"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlHardcoded"
+        severity="warning"
+        message="Use &quot;`Gravity.START`&quot; instead of &quot;`Gravity.LEFT`&quot; to ensure correct behavior in right-to-left locales">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationService.java"
+            line="508"
+            column="39"
+            startOffset="41443"
+            endLine="508"
+            endColumn="43"
+            endOffset="41447"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+</incidents>

@@ -1,0 +1,22 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "alibabacloud-oss-v2>=1.2.4",
+    "chromadb>=1.5.4",
+    "dashscope>=1.25.13",
+    "fastapi>=0.135.1",
+    "loguru>=0.7.3",
+    "ollama>=0.6.1",
+    "openai>=2.29.0",
+    "oss2>=2.19.1",
+    "pydantic-settings>=2.13.1",
+    "pydub>=0.25.1",
+    "python-multipart>=0.0.20",
+    "pyttsx3>=2.99",
+    "sqlalchemy>=2.0.48",
+    "uvicorn>=0.41.0",
+]

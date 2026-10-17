@@ -1,0 +1,23 @@
+SOURCE REVIEW PACKAGE - not a complete runnable project
+Included files: 3
+Included uncompressed bytes: 27041
+Per-file byte limit: 2097152
+Per-project byte limit: 104857600
+
+Before uploading, review ALL included files for passwords, API keys,
+tokens and real user data. Filenames alone cannot identify secrets.
+SQL dumps and notebook outputs may contain private data.
+Large files and unrecognized file extensions can be missing.
+Nested ZIPs are not unpacked. Share missing source separately if needed.
+
+EXCLUSION COUNTS (directory counts are pruned subtrees):
+dependency_or_generated_directory: 2
+
+EXCLUSION DETAILS (first 200):
+dependency_or_generated_directory: __MACOSX/mcp_agent_code/._mcp_agent_llm.py
+dependency_or_generated_directory: __MACOSX/mcp_agent_code/._mcp_server.py
+
+INCLUDED FILES:
+mcp_agent_code/mcp_agent.py
+mcp_agent_code/mcp_agent_llm.py
+mcp_agent_code/mcp_server.py

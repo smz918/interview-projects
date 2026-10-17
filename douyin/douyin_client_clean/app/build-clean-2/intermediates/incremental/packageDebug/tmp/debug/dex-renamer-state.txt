@@ -1,0 +1,10 @@
+#Thu Oct 08 19:52:23 GMT+08:00 2026
+base.2=C\:\\Users\\xl__p\\Desktop\\douyin\\douyin_client_clean\\app\\build-clean-2\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+path.2=4/classes.dex
+base.1=C\:\\Users\\xl__p\\Desktop\\douyin\\douyin_client_clean\\app\\build-clean-2\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+path.1=0/classes.dex
+base.0=C\:\\Users\\xl__p\\Desktop\\douyin\\douyin_client_clean\\app\\build-clean-2\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex

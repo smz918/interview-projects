@@ -1,0 +1,3 @@
+FROM douyin-remote-tasks-base:rollback
+WORKDIR /app
+COPY main.py management.py admin-douyin.js ./

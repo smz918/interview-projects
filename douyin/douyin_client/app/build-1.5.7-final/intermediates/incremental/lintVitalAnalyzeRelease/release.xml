@@ -1,0 +1,31 @@
+<variant
+    name="release"
+    package="dy.lead.client"
+    minSdkVersion="24"
+    targetSdkVersion="34"
+    mergedManifest="build-1.5.7-final\intermediates\merged_manifest\release\processReleaseMainManifest\AndroidManifest.xml"
+    proguardFiles="build-1.5.7-final\intermediates\default_proguard_files\global\proguard-android.txt-8.7.3"
+    partialResultsDir="build-1.5.7-final\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
+    desugaredMethodsFiles="C:\Users\xl__p\.gradle\caches\9.3.1\transforms\58672c5e736e83e24262a4b2c70d7ce5\workspace\transformed\D8BackportedDesugaredMethods.txt">
+  <buildFeatures
+      namespacing="REQUIRED"/>
+  <sourceProviders>
+    <sourceProvider
+        manifests="src\main\AndroidManifest.xml"
+        javaDirectories="src\main\java;src\release\java;src\main\kotlin;src\release\kotlin"
+        resDirectories="src\main\res;src\release\res"
+        assetsDirectories="src\main\assets;src\release\assets"/>
+  </sourceProviders>
+  <testSourceProviders>
+  </testSourceProviders>
+  <testFixturesSourceProviders>
+  </testFixturesSourceProviders>
+  <artifact
+      classOutputs="build-1.5.7-final\intermediates\javac\release\compileReleaseJavaWithJavac\classes;build-1.5.7-final\intermediates\compile_and_runtime_not_namespaced_r_class_jar\release\processReleaseResources\R.jar"
+      type="MAIN"
+      applicationId="dy.lead.client"
+      generatedSourceFolders="build-1.5.7-final\generated\ap_generated_sources\release\out;build-1.5.7-final\generated\source\buildConfig\release"
+      generatedResourceFolders="build-1.5.7-final\generated\res\resValues\release"
+      desugaredMethodsFiles="C:\Users\xl__p\.gradle\caches\9.3.1\transforms\58672c5e736e83e24262a4b2c70d7ce5\workspace\transformed\D8BackportedDesugaredMethods.txt">
+  </artifact>
+</variant>

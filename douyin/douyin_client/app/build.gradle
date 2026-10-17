@@ -1,0 +1,13 @@
+plugins { id 'com.android.application' }
+android { namespace 'dy.lead.client'; compileSdk 34
+ useLibrary 'android.test.runner'
+ useLibrary 'android.test.base'
+ useLibrary 'android.test.mock'
+ buildFeatures { buildConfig true }
+ buildTypes {
+  debug { buildConfigField 'String', 'AI_PROXY_TOKEN', '""'; buildConfigField 'boolean', 'LOCAL_REGRESSION', 'false' }
+  release { signingConfig signingConfigs.debug; buildConfigField 'String', 'AI_PROXY_TOKEN', '""'; buildConfigField 'boolean', 'LOCAL_REGRESSION', 'false' }
+ }
+ defaultConfig { applicationId 'dy.lead.client'; minSdk 24; targetSdk 34; versionCode 53; versionName '1.6.4'; testInstrumentationRunner 'android.test.InstrumentationTestRunner' }
+}
+dependencies { implementation 'com.google.mlkit:text-recognition-chinese:16.0.1' }

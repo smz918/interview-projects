@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "dy.lead.client.app-release-22:/drawable_app_icon_real.png.flat",
+        "source": "dy.lead.client.app-main-23:/drawable/app_icon_real.png"
+    },
+    {
+        "merged": "dy.lead.client.app-release-22:/xml_automation_service.xml.flat",
+        "source": "dy.lead.client.app-main-23:/xml/automation_service.xml"
+    },
+    {
+        "merged": "dy.lead.client.app-release-22:/drawable_app_icon.xml.flat",
+        "source": "dy.lead.client.app-main-23:/drawable/app_icon.xml"
+    }
+]

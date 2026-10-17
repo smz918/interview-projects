@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.7.3" type="incidents">
+
+    <incident
+        id="WrongConstant"
+        severity="error"
+        message="Must be one of: LinearLayout.HORIZONTAL, LinearLayout.VERTICAL">
+        <fix-alternatives>
+            <fix-replace
+                description="Change to LinearLayout.VERTICAL (1)"
+                replacement="android.widget.LinearLayout.VERTICAL"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to LinearLayout.HORIZONTAL"
+                replacement="android.widget.LinearLayout.HORIZONTAL"
+                shortenNames="true"
+                priority="0"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationActivity.java"
+            line="109"
+            column="82"
+            startOffset="12968"
+            endLine="109"
+            endColumn="83"
+            endOffset="12969"/>
+    </incident>
+
+    <incident
+        id="WrongConstant"
+        severity="error"
+        message="Must be one of: LinearLayout.HORIZONTAL, LinearLayout.VERTICAL">
+        <fix-alternatives>
+            <fix-replace
+                description="Change to LinearLayout.VERTICAL (1)"
+                replacement="android.widget.LinearLayout.VERTICAL"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to LinearLayout.HORIZONTAL"
+                replacement="android.widget.LinearLayout.HORIZONTAL"
+                shortenNames="true"
+                priority="0"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/MessagePanel.java"
+            line="24"
+            column="82"
+            startOffset="1172"
+            endLine="24"
+            endColumn="83"
+            endOffset="1173"/>
+    </incident>
+
+    <incident
+        id="WrongConstant"
+        severity="error"
+        message="Must be one of: LinearLayout.HORIZONTAL, LinearLayout.VERTICAL">
+        <fix-alternatives>
+            <fix-replace
+                description="Change to LinearLayout.VERTICAL (1)"
+                replacement="android.widget.LinearLayout.VERTICAL"
+                shortenNames="true"
+                priority="0"/>
+            <fix-replace
+                description="Change to LinearLayout.HORIZONTAL"
+                replacement="android.widget.LinearLayout.HORIZONTAL"
+                shortenNames="true"
+                priority="0"/>
+        </fix-alternatives>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/WorkspaceUi.java"
+            line="19"
+            column="79"
+            startOffset="986"
+            endLine="19"
+            endColumn="80"
+            endOffset="987"/>
+    </incident>
+
+    <incident
+        id="AppCompatCustomView"
+        severity="error"
+        message="This custom view should extend `androidx.appcompat.widget.AppCompatSpinner` instead">
+        <fix-replace
+            description="Extend AppCompat widget instead"
+            family="Extend AppCompat widget instead"
+            robot="true"
+            independent="true"
+            replacement="androidx.appcompat.widget.AppCompatSpinner"
+            priority="0"/>
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/WorkspaceUi.java"
+            line="56"
+            column="40"
+            startOffset="6445"
+            endLine="56"
+            endColumn="47"
+            endOffset="6452"/>
+    </incident>
+
+    <incident
+        id="HardwareIds"
+        severity="warning"
+        message="Using `getString` to get device identifiers is not recommended">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationService.java"
+            line="183"
+            column="89"
+            startOffset="15476"
+            endLine="183"
+            endColumn="197"
+            endOffset="15584"/>
+    </incident>
+
+    <incident
+        id="HardwareIds"
+        severity="warning"
+        message="Using `getString` to get device identifiers is not recommended">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/MainActivity.java"
+            line="69"
+            column="77"
+            startOffset="6397"
+            endLine="69"
+            endColumn="193"
+            endOffset="6513"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/drawable/app_icon_real.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/app_icon_real.png` in densityless folder">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*resDir*0}/drawable/app_icon_real.png"/>
+    </incident>
+
+    <incident
+        id="ClickableViewAccessibility"
+        severity="warning"
+        message="Custom view ``TextView`` has `setOnTouchListener` called on it but does not override `performClick`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationService.java"
+            line="171"
+            column="62"
+            startOffset="14515"
+            endLine="171"
+            endColumn="93"
+            endOffset="14546"/>
+    </incident>
+
+    <incident
+        id="ClickableViewAccessibility"
+        severity="warning"
+        message="Custom view ``TextView`` has `setOnTouchListener` called on it but does not override `performClick`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationService.java"
+            line="171"
+            column="94"
+            startOffset="14547"
+            endLine="171"
+            endColumn="130"
+            endOffset="14583"/>
+    </incident>
+
+    <incident
+        id="ClickableViewAccessibility"
+        severity="warning"
+        message="`RoundedSpinner#performClick` should call `super#performClick`">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/WorkspaceUi.java"
+            line="71"
+            column="34"
+            startOffset="7667"
+            endLine="71"
+            endColumn="46"
+            endOffset="7679"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationActivity.java"
+            line="40"
+            column="150"
+            startOffset="3451"
+            endLine="40"
+            endColumn="155"
+            endOffset="3456"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationActivity.java"
+            line="40"
+            column="174"
+            startOffset="3475"
+            endLine="40"
+            endColumn="178"
+            endOffset="3479"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationActivity.java"
+            line="105"
+            column="266"
+            startOffset="11009"
+            endLine="105"
+            endColumn="315"
+            endOffset="11058"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationService.java"
+            line="89"
+            column="47"
+            startOffset="7788"
+            endLine="89"
+            endColumn="72"
+            endOffset="7813"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/AutomationService.java"
+            line="165"
+            column="59"
+            startOffset="13453"
+            endLine="165"
+            endColumn="73"
+            endOffset="13467"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/MainActivity.java"
+            line="38"
+            column="89"
+            startOffset="3556"
+            endLine="38"
+            endColumn="109"
+            endOffset="3576"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/MainActivity.java"
+            line="54"
+            column="62"
+            startOffset="5146"
+            endLine="54"
+            endColumn="101"
+            endOffset="5185"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/MessagePanel.java"
+            line="67"
+            column="52"
+            startOffset="6017"
+            endLine="67"
+            endColumn="175"
+            endOffset="6140"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/MessagePanel.java"
+            line="68"
+            column="22"
+            startOffset="6164"
+            endLine="68"
+            endColumn="53"
+            endOffset="6195"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/MessagePanel.java"
+            line="94"
+            column="141"
+            startOffset="9747"
+            endLine="94"
+            endColumn="172"
+            endOffset="9778"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*release*MAIN*sourceProvider*0*javaDir*0}/dy/lead/client/WorkspaceUi.java"
+            line="44"
+            column="143"
+            startOffset="4013"
+            endLine="44"
+            endColumn="181"
+            endOffset="4051"/>
+    </incident>
+
+</incidents>

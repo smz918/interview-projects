@@ -1,0 +1,226 @@
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\res\xml\automation_service.xml:7: Warning: Attribute canTakeScreenshot is only used in API level 30 and higher (current min is 24) [UnusedAttribute]
+    android:canTakeScreenshot="true"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationActivity.java:109: Error: Must be one of: LinearLayout.HORIZONTAL, LinearLayout.VERTICAL [WrongConstant]
+    LinearLayout column(){LinearLayout l=new LinearLayout(this);l.setOrientation(1);return l;}
+                                                                                 ~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\MessagePanel.java:24: Error: Must be one of: LinearLayout.HORIZONTAL, LinearLayout.VERTICAL [WrongConstant]
+    LinearLayout column(){LinearLayout l=new LinearLayout(this);l.setOrientation(1);return l;}
+                                                                                 ~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\WorkspaceUi.java:19: Error: Must be one of: LinearLayout.HORIZONTAL, LinearLayout.VERTICAL [WrongConstant]
+    LinearLayout column(){LinearLayout c=new LinearLayout(a);c.setOrientation(1);return c;}
+                                                                              ~
+
+   Explanation for issues of type "WrongConstant":
+   Ensures that when parameter in a method only allows a specific set of
+   constants, calls obey those rules.
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:6: Error: foregroundServiceType:mediaProjection requires permission:[android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION] [ForegroundServicePermission]
+        <service android:name=".LegacyCaptureService" android:exported="false" android:foregroundServiceType="mediaProjection" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ForegroundServicePermission":
+   For targetSdkVersion >= 34, each foregroundServiceType listed in the
+   <service> element requires specific sets of permissions to be declared in
+   the manifest. If permissions are missing, then when the foreground service
+   is started with a foregroundServiceType that has missing permissions, a
+   SecurityException will be thrown.
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\WorkspaceUi.java:56: Error: This custom view should extend androidx.appcompat.widget.AppCompatSpinner instead [AppCompatCustomView]
+    final class RoundedSpinner extends Spinner {
+                                       ~~~~~~~
+
+   Explanation for issues of type "AppCompatCustomView":
+   In order to support features such as tinting, the appcompat library will
+   automatically load special appcompat replacements for the builtin widgets.
+   However, this does not work for your own custom views.
+
+   Instead of extending the android.widget classes directly, you should
+   instead extend one of the delegate classes in
+   androidx.appcompat.widget.AppCompatTextView.
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationService.java:183: Warning: Using getString to get device identifiers is not recommended [HardwareIds]
+            try {String id=android.os.Build.MANUFACTURER+"-"+android.os.Build.MODEL+"-"+android.provider.Settings.Secure.getString(getContentResolver(),android.provider.Settings.Secure.ANDROID_ID);
+                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\MainActivity.java:69: Warning: Using getString to get device identifiers is not recommended [HardwareIds]
+        return android.os.Build.MANUFACTURER+"-"+android.os.Build.MODEL+"-"+android.provider.Settings.Secure.getString(context.getContentResolver(),android.provider.Settings.Secure.ANDROID_ID);
+                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardwareIds":
+   Using these device identifiers is not recommended other than for high value
+   fraud prevention and advanced telephony use-cases. For advertising
+   use-cases, use AdvertisingIdClient$Info#getId and for analytics, use
+   InstanceId#getId.
+
+   https://developer.android.com/training/articles/user-data-ids.html
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\AndroidManifest.xml:5: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+    <application android:allowBackup="false" android:usesCleartextTraffic="true" android:theme="@style/AppTheme" android:label="518获客先锋" android:icon="@drawable/app_icon_real">
+                                      ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\res\drawable\app_icon.xml:1: Warning: The resource R.drawable.app_icon appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="96dp" android:height="96dp" android:viewportWidth="96" android:viewportHeight="96"><path android:fillColor="#151b80" android:pathData="M48,2A46,46 0,1 0,48 94A46,46 0,1 0,48 2"/><path android:strokeColor="#9cf6ff" android:strokeWidth="3" android:fillColor="@android:color/transparent" android:pathData="M22,52C28,24 64,24 73,48C80,68 58,79 39,66M48,18C62,30 59,59 48,76M27,62L18,72M68,65L78,74"/></vector>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\res\drawable\app_icon_real.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://d.android.com/r/studio-ui/designer/material/iconography) your
+   launcher icons should "use a distinct silhouette", a "three-dimensional,
+   front view, with a slight perspective as if viewed from above, so that
+   users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\res\drawable\app_icon_real.png: Warning: Found bitmap drawable res/drawable/app_icon_real.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationService.java:171: Warning: Custom view `TextView` has setOnTouchListener called on it but does not override performClick [ClickableViewAccessibility]
+        OverlayDrag drag=new OverlayDrag(wm,overlay,p,prefs);handle.setOnTouchListener(drag);overlayText.setOnTouchListener(drag);overlay.post(drag::restore);
+                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationService.java:171: Warning: Custom view `TextView` has setOnTouchListener called on it but does not override performClick [ClickableViewAccessibility]
+        OverlayDrag drag=new OverlayDrag(wm,overlay,p,prefs);handle.setOnTouchListener(drag);overlayText.setOnTouchListener(drag);overlay.post(drag::restore);
+                                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\WorkspaceUi.java:71: Warning: RoundedSpinner#performClick should call super#performClick [ClickableViewAccessibility]
+        @Override public boolean performClick(){
+                                 ~~~~~~~~~~~~
+
+   Explanation for issues of type "ClickableViewAccessibility":
+   If a View that overrides onTouchEvent or uses an OnTouchListener does not
+   also implement performClick and call it when clicks are detected, the View
+   may not handle accessibility actions properly. Logic handling the click
+   actions should ideally be placed in View#performClick as some accessibility
+   services invoke performClick when a click action should occur.
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationActivity.java:40: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            ui.postDelayed(()->{if(AutomationService.instance==null||AutomationService.instance.running){toast("回归需要服务已连接且空闲");return;}limit.setText("100");perVideo.setText("10");profiles.setChecked(true);acquisitionRegression=true;start(false);acquisitionRegression=false;},1200);
+                                                                                                                                                     ~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationActivity.java:40: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            ui.postDelayed(()->{if(AutomationService.instance==null||AutomationService.instance.running){toast("回归需要服务已连接且空闲");return;}limit.setText("100");perVideo.setText("10");profiles.setChecked(true);acquisitionRegression=true;start(false);acquisitionRegression=false;},1200);
+                                                                                                                                                                             ~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationActivity.java:105: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+    void render(){if(results==null)return;results.removeAllViews();JSONArray all=db.all();int shown=0;for(int i=0;i<all.length();i++){JSONObject o=all.optJSONObject(i);if(!aiEligible(o))continue;if(shown++>=100)break;CheckBox check=new CheckBox(this);check.setText(o.optString("name")+" · 意向 "+o.optString("score"));String key=o.optString("key");check.setChecked(selected.contains(key));check.setOnCheckedChangeListener((b,v)->{if(v)selected.add(key);else selected.remove(key);});results.addView(check);String account=o.optString("account");TextView info=text(o.optString("body")+"\n"+o.optString("place")+" · "+o.optString("posted")+"\n抖音号："+(account.isEmpty()?"未获取":account)+"\n"+o.optString("reason"),13);info.setPadding(12,0,12,18);results.addView(info);}if(shown==0)results.addView(text("当前口径下暂无意向客户",14));}
+                                                                                                                                                                                                                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationService.java:89: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        if(overlay!=null){overlayText.setText("518 · 已停止\n"+finalReason);overlayText.setMaxLines(7);overlayStop.setText("关闭提示");overlayStop.setOnClickListener(v->dismissOverlay());}
+                                              ~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationService.java:165: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        TextView handle=new TextView(this);handle.setText("518 · 按住此处拖动");handle.setTextColor(0xff526b83);handle.setTextSize(11);handle.setPadding(4,6,4,12);overlay.addView(handle);
+                                                          ~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\MainActivity.java:38: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+        if(!p.matches("1[3-9][0-9]{9}")||pw.length()<6||pw.length()>128){status.setText("请填写11位手机号和6至128位密码");return;}
+                                                                                        ~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\MainActivity.java:54: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        }catch(Exception e){runOnUiThread(()->status.setText((signup?"注册失败：":"登录失败：")+e.getMessage()));}
+                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\MessagePanel.java:67: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        selected.retainAll(allowed);counts.setText("总数 "+raw+" · 已发送 "+sentIds.size()+" · 合并后 "+displayed.size()+"\n合并掉 "+(raw-displayed.size())+" 条 · 缺少/无效抖音号 "+missing+" 条");
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\MessagePanel.java:68: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        send.setText("给选中的 "+selected.size()+" 人发私信");list.removeAllViews();taskBodies.clear();taskRows.clear();
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\MessagePanel.java:94: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+            select.setOnCheckedChangeListener((v,yes)->{if(yes)selected.add(key);else selected.remove(key);syncChecks(key,yes);send.setText("给选中的 "+selected.size()+" 人发私信");});
+                                                                                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\WorkspaceUi.java:44: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+    void refreshPermissions(){boolean on=AutomationService.instance!=null;for(TextView t:new TextView[]{access,overlay})if(t!=null){t.setText((t==access?"无障碍":"悬浮窗")+(on?" ✓":" ×"));t.setTextColor(on?0xff40916e:0xffb84965);t.setBackground(shape(on?0xffeef8f2:0xfffff0f3,on?0xffd5e8dc:0xffeed6df,16));}}
+                                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationService.java:170: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        p.gravity=Gravity.LEFT|Gravity.TOP;p.x=0;p.y=0;p.width=(int)(getResources().getDisplayMetrics().density*170);wm.addView(overlay,p);
+                          ~~~~
+C:\Users\xl__p\Desktop\douyin\douyin_client\app\src\main\java\dy\lead\client\AutomationService.java:508: Warning: Use "Gravity.START" instead of "Gravity.LEFT" to ensure correct behavior in right-to-left locales [RtlHardcoded]
+        p.gravity=Gravity.TOP|Gravity.LEFT;p.x=bounds.left;p.y=bounds.top;wm.addView(mark,p);
+                                      ~~~~
+
+   Explanation for issues of type "RtlHardcoded":
+   Using Gravity#LEFT and Gravity#RIGHT can lead to problems when a layout is
+   rendered in locales where text flows from right to left. Use Gravity#START
+   and Gravity#END instead. Similarly, in XML gravity and layout_gravity
+   attributes, use start rather than left.
+
+   For XML attributes such as paddingLeft and layout_marginLeft, use
+   paddingStart and layout_marginStart. NOTE: If your minSdkVersion is less
+   than 17, you should add both the older left/right attributes as well as the
+   new start/end attributes. On older platforms, where RTL is not supported
+   and the start/end attributes are unknown and therefore ignored, you need
+   the older left/right attributes. There is a separate lint check which
+   catches that type of error.
+
+   (Note: For Gravity#LEFT and Gravity#START, you can use these constants even
+   when targeting older platforms, because the start bitmask is a superset of
+   the left bitmask. Therefore, you can use gravity="start" rather than
+   gravity="left|start".)
+
+5 errors, 23 warnings

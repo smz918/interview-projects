@@ -1,0 +1,8 @@
+{
+  "/opt/518-auth/central_auth/main.py": "9ae32d00e95bf24b6bf79f1114a53b9bff9cabd045a7d3a6f33bc720396c23b2",
+  "/opt/518-auth/central_auth/admin.html": "970950903ca4804e3dc7af723ff90c755c60ab95436da6fadb1be4f418c3b6f0",
+  "/www/server/panel/vhost/nginx/518-auth-9000.conf": "82939de25c5aca03c9b2cd097baf31ba461ece0ea75a98fe340fe3ec1089f6eb",
+  "/opt/douyin_admin/api/main.py": "794b83dd130e9e49ea390cb65a37b7c5a88ada85588fa44190e7bb8f5b297311",
+  "/opt/douyin_admin/docker-compose.yml": "24baf6c3293579257345e92ab4f503faa7a91ae4b9532ff755ec7e6dd76ff5c2",
+  "/opt/douyin_admin/api/Dockerfile": "9da865af611612e8a97ddd3a2c248122c4aaedde5bc91edf674a722a969b4067"
+}

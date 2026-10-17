@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\xl__p\Desktop\douyin\douyin_client\app"
+    name=":app"
+    type="APP"
+    maven="DouyinClient:app:unspecified"
+    agpVersion="8.7.3"
+    buildFolder="build-1.5.7-final"
+    bootClassPath="C:\Android\Sdk\platforms\android-34\android.jar;C:\Android\Sdk\platforms\android-34\optional\android.test.mock.jar;C:\Android\Sdk\platforms\android-34\optional\android.test.base.jar;C:\Android\Sdk\platforms\android-34\optional\android.test.runner.jar;C:\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

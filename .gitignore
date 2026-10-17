@@ -1,0 +1,78 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ===== Android / Gradle =====
+.gradle/
+build/
+local.properties
+*.apk
+*.ap_
+*.dex
+*.class
+.cxx/
+.kotlin/
+captures/
+outputs/
+androidTest-results/
+*.iml
+.idea/
+
+# ===== Node =====
+node_modules/
+npm-debug.log*
+
+# ===== 环境与密钥（保留.example）=====
+.env
+.env.local
+.env.*.local
+!.env.example
+config/local.py
+secrets.json
+
+# ===== 日志与临时文件 =====
+*.log
+*.log.*
+logs/
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# ===== IDE =====
+.vscode/
+*.swp
+*.swo
+
+# ===== 大模型权重 / 数据集（不入库）=====
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+!download_model.py
+models/
+checkpoints/
+*.faiss
+*.index
+!data/*.md
+!data/*.json
+!data/*.txt

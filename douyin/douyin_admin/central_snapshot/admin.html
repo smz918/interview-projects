@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>518获客先锋 - 用户授权后台</title>
+  <style>
+    :root { --nav:#061b2d; --blue:#1677ff; --bg:#f5f7fb; --panel:#fff; --line:#e5e9f0; --text:#172033; --muted:#66758a; --red:#ff4d4f; --green:#13a365; --amber:#d48806; }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}
+    button,input,select,textarea{font:inherit} button{border:1px solid var(--line);background:#fff;border-radius:4px;padding:7px 13px;cursor:pointer} button.primary{background:var(--blue);border-color:var(--blue);color:#fff} button.link{border:0;background:transparent;color:var(--blue);padding:0 6px} button.danger{color:var(--red)}
+    input,select,textarea{border:1px solid #d9dfe8;border-radius:4px;padding:7px 10px;background:#fff} textarea{width:100%;min-height:180px;font-family:Consolas,monospace;white-space:pre-wrap}
+    .hidden{display:none!important}.login{min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#061b2d,#123e66)}.login-card{width:390px;background:#fff;border-radius:6px;padding:28px;box-shadow:0 18px 50px rgba(0,0,0,.22)}.login-card h1{margin:0 0 6px;font-size:24px}.login-card p{margin:0 0 22px;color:var(--muted)}.field{margin-bottom:14px}.field label{display:block;margin-bottom:6px;color:#4b5b70}.field input,.field select{width:100%}.error{color:var(--red);min-height:20px;margin-top:10px}
+    .app{min-height:100vh;display:grid;grid-template-columns:240px 1fr}.sidebar{background:var(--nav);color:#d6e4f5;padding:16px 8px;display:flex;flex-direction:column}.brand{display:flex;align-items:center;gap:10px;padding:0 14px 20px;color:#fff;font-weight:700;font-size:18px}.brand-mark{width:36px;height:36px;border-radius:6px;background:var(--blue);display:grid;place-items:center}.menu-title{color:#8195aa;font-size:12px;padding:18px 16px 8px}.menu button{width:100%;display:flex;gap:10px;border:0;color:#d6e4f5;background:transparent;padding:12px 16px;text-align:left;border-radius:6px}.menu button.active,.menu button:hover{background:var(--blue);color:#fff}.main{min-width:0}.topbar{height:52px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 18px}.crumb{color:var(--muted)}.content{padding:14px 12px 42px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden;margin-bottom:12px}.panel-title{padding:11px 12px;font-weight:700;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.filters{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:14px 12px;border-bottom:1px solid var(--line)}.filters label{display:flex;align-items:center;gap:8px}.stats{display:grid;grid-template-columns:repeat(4,minmax(130px,1fr));gap:12px;margin-bottom:12px}.stat{background:#fff;border:1px solid var(--line);border-radius:7px;padding:15px}.stat span{color:var(--muted)}.stat strong{display:block;margin-top:7px;font-size:24px}
+    table{width:100%;border-collapse:collapse;table-layout:fixed}th,td{border-bottom:1px solid var(--line);border-right:1px solid var(--line);padding:9px 10px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}th:last-child,td:last-child{border-right:0}th{background:#f7f8fa;font-weight:700}tbody tr:hover{background:#f8fbff}.badge{display:inline-flex;border-radius:999px;padding:3px 10px;font-size:12px}.ok{background:#e8fff5;color:var(--green)}.off{background:#fff1f0;color:var(--red)}.role{background:#fff7e6;color:var(--amber)}.muted{color:var(--muted)}.actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.pager{display:flex;justify-content:flex-end;gap:12px;padding:10px 12px}.drawer{position:fixed;inset:0;display:none;background:rgba(15,23,42,.35);z-index:20}.drawer.open{display:block}.dialog{position:absolute;right:0;top:0;width:min(500px,100%);height:100%;background:#fff;padding:22px;box-shadow:-18px 0 40px rgba(0,0,0,.15);overflow:auto}.dialog h2{margin:0 0 18px}.dialog-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}.detail-dialog{width:min(900px,100%)}.watermark{position:fixed;inset:0;pointer-events:none;opacity:.035;background-image:repeating-linear-gradient(-15deg,transparent 0 135px,#001529 136px 137px)}
+    @media(max-width:960px){.app{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}table{display:block;overflow-x:auto}th,td{min-width:120px}}
+  </style>
+</head>
+<body>
+  <section id="login" class="login">
+    <form id="loginForm" class="login-card">
+      <h1>518获客先锋后台</h1><p>你创建账号后，用户才能登录软件。</p>
+      <div class="field"><label>管理员账号</label><input id="loginUser" value="admin" autocomplete="username"></div>
+      <div class="field"><label>密码</label><input id="loginPass" type="password" autocomplete="current-password"></div>
+      <button class="primary" style="width:100%">登录</button><div id="loginError" class="error"></div>
+    </form>
+  </section>
+
+  <section id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">518</span><span>获客先锋后台</span></div>
+      <div class="menu">
+        <div class="menu-title">授权管理</div>
+        <button data-view="users" class="active">♙ 用户管理</button>
+        <button data-view="activity">☷ 行为动作</button>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="topbar"><div class="crumb">518获客先锋 ＞ <strong id="crumbTitle">用户管理</strong></div><div><strong>管理员</strong> <button id="logoutBtn">退出</button></div></div>
+      <div class="content"><div class="watermark"></div>
+        <section id="usersView">
+          <div class="stats">
+            <div class="stat"><span>总用户</span><strong id="sUsers">0</strong></div>
+            <div class="stat"><span>启用用户</span><strong id="sActive">0</strong></div>
+            <div class="stat"><span>今日登录</span><strong id="sLogin">0</strong></div>
+            <div class="stat"><span>今日动作</span><strong id="sActivity">0</strong></div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">518获客先锋 - 用户管理 <button class="primary" id="addUserBtn">添加用户</button></div>
+            <div class="filters">
+              <label>账号/备注/推荐人：<input id="userKeyword" placeholder="模糊匹配"></label>
+              <label>状态：<select id="userStatus"><option value="">全部</option><option value="1">启用</option><option value="0">停用</option></select></label>
+              <button class="primary" id="searchUsers">查询</button><button id="resetUsers">重置</button>
+            </div>
+            <table>
+              <thead><tr><th style="width:70px">序号</th><th>用户名</th><th>密码</th><th>备注</th><th>推荐人</th><th>状态</th><th style="width:130px">今日电话</th><th>使用时间</th><th>注册时间</th><th>最近登录</th><th style="width:290px">操作</th></tr></thead>
+              <tbody id="usersBody"></tbody>
+            </table>
+            <div class="pager"><span id="userCount">共0条</span><button>1</button><select><option>10 条/页</option></select></div>
+          </div>
+        </section>
+
+        <section id="activityView" class="panel hidden">
+          <div class="panel-title">用户行为动作</div>
+          <div class="filters">
+            <label>用户：<input id="activityUser" placeholder="用户名"></label>
+            <label>模块：<select id="activityModule"><option value="">全部模块</option><option value="lead_acquisition">意愿客户获取</option><option value="monitoring">同行笔记监控</option><option value="engagement">客户互动助手</option><option value="viral">爆款笔记生成</option><option value="phone_acquisition">电话获取</option></select></label>
+            <label>日志：<select id="activityMode"><option value="key">关键动作</option><option value="all">全部执行明细</option><option value="failed">仅失败/异常</option></select></label>
+            <label>数量：<select id="activityLimit"><option>100</option><option selected>300</option><option>1000</option><option>2000</option></select></label>
+            <button class="primary" id="searchActivity">查询</button><button id="resetActivity">重置</button>
+          </div>
+          <table><thead><tr><th style="width:170px">时间</th><th style="width:130px">用户</th><th style="width:140px">模块</th><th style="width:130px">日志类型</th><th>他做了什么</th><th style="width:150px">设备/版本</th><th style="width:100px">结果</th><th style="width:90px">耗时</th><th style="width:90px">详情</th></tr></thead><tbody id="activityBody"></tbody></table>
+        </section>
+      </div>
+    </main>
+  </section>
+
+  <div id="userDrawer" class="drawer"><form id="userForm" class="dialog">
+    <h2>添加用户</h2>
+    <div class="field"><label>用户名/手机号</label><input id="newUsername" required></div>
+    <div class="field"><label>密码，创建后后台可见</label><input id="newPassword" required></div>
+    <div class="field"><label>备注，方便你记这个用户是谁</label><input id="newNote" placeholder="例如：合肥某某客户"></div>
+    <div class="field"><label>推荐人</label><input id="newReferrer" placeholder="可留空"></div>
+    <div class="field"><label>使用时间，到期后自动停止权限，可留空</label><input id="newExpiresAt" placeholder="2026-12-31"></div>
+    <div class="field"><label>电话获取每日额度（-1 不限，0 禁止）</label><input id="newPhoneLimit" type="number" min="-1" value="100"></div>
+    <div class="dialog-actions"><button type="button" id="cancelUser">取消</button><button class="primary">创建</button></div>
+    <div id="userError" class="error"></div>
+  </form></div>
+
+  <div id="noteDrawer" class="drawer"><form id="noteForm" class="dialog">
+    <h2>编辑备注</h2><input type="hidden" id="noteUserId"><div class="field"><label>备注</label><input id="editNote"></div>
+    <div class="dialog-actions"><button type="button" id="cancelNote">取消</button><button class="primary">保存</button></div>
+  </form></div>
+
+  <div id="quotaDrawer" class="drawer"><form id="quotaForm" class="dialog">
+    <h2>设置电话每日额度</h2><input type="hidden" id="quotaUserId">
+    <div class="field"><label>每日最多获取条数</label><input id="editPhoneLimit" type="number" min="-1" required></div>
+    <p class="muted">-1 表示不限量，0 表示禁止获取，正数表示每天最多返回的企业/商家信息条数。每天 00:00 按北京时间重新计算。</p>
+    <div class="dialog-actions"><button type="button" id="cancelQuota">取消</button><button class="primary">保存</button></div>
+  </form></div>
+
+  <div id="detailDrawer" class="drawer"><div class="dialog detail-dialog">
+    <h2>行为详情/完整日志</h2><textarea id="detailText" readonly></textarea>
+    <div class="dialog-actions"><button id="closeDetail">关闭</button></div>
+  </div></div>
+
+  <script>
+    const state={token:localStorage.getItem('central_auth_token')||'',view:'users',activity:[]}; const $=id=>document.getElementById(id);
+    const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); const ok=(v,t)=>`<span class="badge ${v?'ok':'off'}">${esc(t)}</span>`;
+    async function api(path,opt={}){const h=new Headers(opt.headers||{});h.set('Accept','application/json');if(opt.body)h.set('Content-Type','application/json');if(state.token)h.set('Authorization','Bearer '+state.token);const r=await fetch(path,{...opt,headers:h});const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.detail||d.message||'请求失败');return d}
+    async function login(e){e.preventDefault();$('loginError').textContent='';try{const d=await api('/api/auth/login',{method:'POST',body:JSON.stringify({username:$('loginUser').value.trim(),password:$('loginPass').value,device_name:'central-admin-web',app_version:'web'})});if(!d.is_admin)throw new Error('当前账号不是管理员');state.token=d.token;localStorage.setItem('central_auth_token',state.token);showApp()}catch(err){$('loginError').textContent=err.message}}
+    async function verify(){if(!state.token)return showLogin();try{const d=await api('/api/auth/verify',{method:'POST',body:JSON.stringify({device_name:'central-admin-web',app_version:'web'})});if(!d.is_admin)throw new Error('not admin');showApp()}catch{localStorage.removeItem('central_auth_token');state.token='';showLogin()}}
+    function showLogin(){$('login').classList.remove('hidden');$('app').classList.add('hidden')} function showApp(){$('login').classList.add('hidden');$('app').classList.remove('hidden');switchView(state.view)}
+    function switchView(v){state.view=v;$('crumbTitle').textContent=v==='users'?'用户管理':'行为动作';$('usersView').classList.toggle('hidden',v!=='users');$('activityView').classList.toggle('hidden',v!=='activity');document.querySelectorAll('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===v));v==='users'?loadUsers():loadActivity()}
+    async function loadSummary(){const s=await api('/api/auth/summary');$('sUsers').textContent=s.users_total;$('sActive').textContent=s.users_active;$('sLogin').textContent=s.login_today;$('sActivity').textContent=s.activity_today}
+    async function loadUsers(){await loadSummary();const keyword=$('userKeyword').value.trim().toLowerCase(),status=$('userStatus').value;const logs=await api('/api/auth/login-logs?limit=1000');const last={};logs.filter(r=>r.success).reverse().forEach(r=>last[r.username]=r.login_time);let rows=await api('/api/auth/users');rows=rows.filter(u=>(!keyword||String(u.username).toLowerCase().includes(keyword)||String(u.note||'').toLowerCase().includes(keyword)||String(u.referrer||'').toLowerCase().includes(keyword))&&(!status||String(Number(u.is_active))===status));$('userCount').textContent=`共${rows.length}条`;$('usersBody').innerHTML=rows.map((u,i)=>{const quota=Number(u.daily_phone_limit)<0?`${u.phone_used_today||0} / 不限`:`${u.phone_used_today||0} / ${u.daily_phone_limit||0}`;return `<tr><td>${i+1}</td><td>${esc(u.username)}</td><td>${esc(u.password_plain||'')}</td><td title="${esc(u.note||'')}">${esc(u.note||'')}</td><td>${esc(u.referrer||'')}</td><td>${ok(u.is_active,u.is_active?'启用':'停用')}</td><td>${esc(quota)}</td><td>${esc(u.expires_at||'长期')}</td><td>${esc(u.created_at)}</td><td>${esc(last[u.username]||'-')}</td><td><div class="actions"><button class="link" data-logs="${esc(u.username)}">查看日志</button><button class="link" data-quota="${u.id}" data-quota-value="${u.daily_phone_limit}">电话额度</button><button class="link ${u.is_active?'danger':''}" data-status="${u.id}" data-active="${u.is_active?0:1}">${u.is_active?'停止权限':'恢复权限'}</button><button class="link" data-note="${u.id}" data-note-value="${esc(u.note||'')}">编辑备注</button><button class="link danger" data-delete="${u.id}">删除</button></div></td></tr>`}).join('')}
+    const eventNames={task_start:'任务启动',task_runtime:'执行步骤',task_result:'任务结果',task_stop:'任务停止',business_action:'业务动作',app_action:'应用操作',app_session:'应用会话',api_call:'接口调用'};const moduleNames={lead_acquisition:'意愿客户获取',monitoring:'同行笔记监控',engagement:'客户互动助手',viral:'爆款笔记生成',phone_acquisition:'电话获取'};
+    async function loadActivity(){const user=encodeURIComponent($('activityUser').value.trim()),module=encodeURIComponent($('activityModule').value),mode=encodeURIComponent($('activityMode').value),limit=encodeURIComponent($('activityLimit').value||'300');state.activity=await api(`/api/auth/activity?username=${user}&module=${module}&view_mode=${mode}&limit=${limit}`);$('activityBody').innerHTML=state.activity.map((r,i)=>{const text=r.message||r.action||r.event_type,device=[r.device_name,r.app_version].filter(Boolean).join(' · ')||'-';return `<tr><td>${esc(r.event_time)}</td><td>${esc(r.username)}</td><td>${esc(moduleNames[r.module]||r.module||'-')}</td><td>${esc(eventNames[r.event_type]||r.event_type||'-')}</td><td title="${esc(text)}">${esc(text)}</td><td title="${esc(device)}">${esc(device)}</td><td>${ok(r.success,r.success?'成功':'失败')}</td><td>${r.duration_ms||0}ms</td><td><button class="link" data-detail="${i}">查看</button></td></tr>`}).join('')}
+    async function showActivityDetail(index){const row=state.activity[index]||{};try{const timeline=await api(`/api/auth/activity/${row.id}/timeline`);const lines=(timeline.events||[]).map((item,idx)=>{const label=item.message||item.action||item.event_type,request=[item.method,item.path].filter(Boolean).join(' '),metadata=item.metadata_detail&&Object.keys(item.metadata_detail).length?`\n附加数据：\n${JSON.stringify(item.metadata_detail,null,2)}`:'';return `${idx+1}. [${item.event_time}] ${item.success?'成功':'失败'} · ${eventNames[item.event_type]||item.event_type||'记录'}\n动作：${label||'-'}\n模块：${moduleNames[item.module]||item.module||'-'}  任务ID：${item.task_id||timeline.task_id||'-'}  运行ID：${item.run_id||timeline.run_id||'-'}\n设备：${item.device_name||'-'}  版本：${item.app_version||'-'}  IP：${item.ip_address||'-'}\n请求：${request||'-'}  状态码：${item.status_code||'-'}  耗时：${item.duration_ms||0}ms${metadata}\n`});$('detailText').value=`用户：${timeline.username||row.username||'-'}\n任务：${timeline.task_id||row.task_id||'-'}  运行：${timeline.run_id||row.run_id||'-'}\n记录数：${(timeline.events||[]).length}\n\n${lines.join('\n')||'暂无运行日志'}`}catch(err){$('detailText').value=row.message||row.metadata||err.message||'暂无日志'}$('detailDrawer').classList.add('open')}
+    async function createUser(e){e.preventDefault();$('userError').textContent='';try{await api('/api/auth/users',{method:'POST',body:JSON.stringify({username:$('newUsername').value.trim(),password:$('newPassword').value,note:$('newNote').value.trim(),referrer:$('newReferrer').value.trim(),expires_at:$('newExpiresAt').value.trim(),daily_phone_limit:Number($('newPhoneLimit').value||100),is_admin:false,is_active:true})});$('userDrawer').classList.remove('open');$('userForm').reset();$('newPhoneLimit').value='100';loadUsers()}catch(err){$('userError').textContent=err.message}}
+    async function saveNote(e){e.preventDefault();await api('/api/auth/users/note',{method:'PUT',body:JSON.stringify({user_id:Number($('noteUserId').value),note:$('editNote').value})});$('noteDrawer').classList.remove('open');loadUsers()}
+    async function saveQuota(e){e.preventDefault();await api('/api/auth/users/phone-quota',{method:'PUT',body:JSON.stringify({user_id:Number($('quotaUserId').value),daily_phone_limit:Number($('editPhoneLimit').value)})});$('quotaDrawer').classList.remove('open');loadUsers()}
+    document.addEventListener('click',async e=>{if(e.target.dataset.view)switchView(e.target.dataset.view);if(e.target.dataset.logs){$('activityUser').value=e.target.dataset.logs;switchView('activity')}if(e.target.dataset.quota){$('quotaUserId').value=e.target.dataset.quota;$('editPhoneLimit').value=e.target.dataset.quotaValue;$('quotaDrawer').classList.add('open')}if(e.target.dataset.status&&confirm(e.target.dataset.active==='1'?'确定恢复这个用户的权限？':'确定立刻停止这个用户的权限？')){await api('/api/auth/users/status',{method:'PUT',body:JSON.stringify({user_id:Number(e.target.dataset.status),is_active:e.target.dataset.active==='1'})});loadUsers()}if(e.target.dataset.delete&&confirm('确定删除这个用户？')){await api('/api/auth/users/'+e.target.dataset.delete,{method:'DELETE'});loadUsers()}if(e.target.dataset.note){$('noteUserId').value=e.target.dataset.note;$('editNote').value=e.target.dataset.noteValue||'';$('noteDrawer').classList.add('open')}if(e.target.dataset.detail!==undefined){showActivityDetail(Number(e.target.dataset.detail))}})
+    $('loginForm').addEventListener('submit',login);$('logoutBtn').onclick=()=>{localStorage.removeItem('central_auth_token');state.token='';showLogin()};$('addUserBtn').onclick=()=>$('userDrawer').classList.add('open');$('cancelUser').onclick=()=>$('userDrawer').classList.remove('open');$('userForm').addEventListener('submit',createUser);$('noteForm').addEventListener('submit',saveNote);$('cancelNote').onclick=()=>$('noteDrawer').classList.remove('open');$('quotaForm').addEventListener('submit',saveQuota);$('cancelQuota').onclick=()=>$('quotaDrawer').classList.remove('open');$('closeDetail').onclick=()=>$('detailDrawer').classList.remove('open');$('searchUsers').onclick=loadUsers;$('resetUsers').onclick=()=>{$('userKeyword').value='';$('userStatus').value='';loadUsers()};$('searchActivity').onclick=loadActivity;$('resetActivity').onclick=()=>{$('activityUser').value='';$('activityModule').value='';$('activityMode').value='key';$('activityLimit').value='300';loadActivity()};verify();
+  </script>
+</body>
+</html>

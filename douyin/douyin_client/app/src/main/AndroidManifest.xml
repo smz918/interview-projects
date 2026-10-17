@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <queries><package android:name="com.ss.android.ugc.aweme" /></queries>
+    <application android:allowBackup="false" android:usesCleartextTraffic="true" android:theme="@style/AppTheme" android:label="518获客先锋" android:icon="@drawable/app_icon_real">
+        <service android:name=".LegacyCaptureService" android:exported="false" android:foregroundServiceType="mediaProjection" />
+        <service android:name=".DiagnosticUploadJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true" />
+        <activity android:name=".LegacyCaptureActivity" android:exported="false" android:excludeFromRecents="true" android:taskAffinity="" />
+        <service android:name=".AutomationService" android:label="518获客先锋 · 自动化" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
+            <intent-filter><action android:name="android.accessibilityservice.AccessibilityService" /></intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/automation_service" />
+        </service>
+        <activity android:name=".AutomationActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InteractionActivity" android:exported="false" />
+        <activity android:name=".MainActivity" android:exported="false" />
+        <activity android:name=".MessageActivity" android:exported="false" />
+        <activity android:name=".RemoteTaskActivity" android:exported="false" />
+    </application>
+</manifest>
